@@ -1,5 +1,16 @@
-# Configure isso:
+#!/bin/bash
+
 GITHUB_USER=paulojeronimo
 GITHUB_NAME='Paulo Jerônimo'
 GITHUB_EMAIL=paulojeronimo@gmail.com
 
+USA_FORKS=true
+
+$USA_FORKS && GITHUB_REPO_USER=$GITHUB_USER || GITHUB_REPO_USER=pensandoodireito
+
+GITHUB_SISLEGIS_DOTFILES=http://github.com/$GITHUB_REPO_USER/sislegis-dotfiles
+GITHUB_SISLEGIS_AMBIENTE=http://github.com/$GITHUB_REPO_USER/sislegis-ambiente
+GITHUB_SISLEGIS_SITE=http://github.com/$GITHUB_REPO_USER/sislegis-site
+GITHUB_SISLEGIS_APP=http://github.com/$GITHUB_REPO_USER/sislegis-app
+
+# vim: set ts=2 sw=2 expandtab:
