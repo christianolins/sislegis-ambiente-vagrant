@@ -3,6 +3,7 @@
 
 source ~/.`hostname -s`
 
+salvar_instaladores
 app_baixar
 app_update_and_deploy
 jboss_start
