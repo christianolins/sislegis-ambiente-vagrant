@@ -59,9 +59,9 @@ Quando o processo de provisionamento terminar, você poderá acessar a URL da ap
 ## Detalhes operacionais
 
 Após a `box` ter sido provisionada e você ter acessado a URL da sislegis-app, você deverá notar que:
+
 1. O diretório `projetos` estará acessível tanto no HOST quanto na `box`. Ele contém outros projetos do SISLEGIS, como o sislegis-app (app) e o [sislegis-site] (site).
 2. Os seguintes diretórios também existirão no HOST e estarão montados na `box`:
-
     1. `.m2` -> repositório local do maven;
     2. `instaladores/fedy_dl` -> pacotes instalados pelo Fedy (ex.: Oracle JDK);
     3. `instaladores/sislegis-ambiente` -> instaladores do Maven, Forge, WildFly, etc, baixados durante a montagem do ambiente pelo projeto [sislegis-ambiente].
