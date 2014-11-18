@@ -5,8 +5,10 @@
 set -e
 
 echo "Copiando e carregando as configurações ..."
-cp /vagrant/config ~/.github
-source ~/.github
+f=~/.github
+cp /vagrant/config $f
+dos2unix $f
+source $f
 
 echo "Instalando sislegis-dotfiles ..."
 git clone $GITHUB_SISLEGIS_DOTFILES
