@@ -14,4 +14,5 @@ tar \
 unzip \
 wget \
 git \
-tree
+tree \
+dos2unix
