@@ -17,7 +17,7 @@ Faça o fork dos seguintes projetos para a tua conta no GitHub:
 #### Instale o [Cygwin]
 Pacotes que você deve instalar (necessários): git, ssh.
 
-Pacotes opcionais (sugerimos sua instalação): tmux, tree, unzip, vim.
+Pacotes opcionais (sugerimos sua instalação): tmux, tree, zip, unzip, vim.
 
 Coloque os binários do Cygwin no PATH do sistema! Isso será necessário para a execução do Vagrant nesse ambiente.
 
@@ -47,6 +47,13 @@ Crie e edite o arquivo config para informar os teus dados:
 cp config.exemplo config
 vim config
 ```
+
+Se desejar alterar a porta local (em teu HOST) utilizada para acesso ao sislegis-app (por exemplo, para a porta 8180), execute:
+
+```bash
+export PORTA_SISLEGIS=8180
+```
+Para manter essa porta configurada em teu ambiente, adicione essa linha ao final do arquivo `.bashrc`.
 
 Inicie o vagrant conforme o comando a seguir. O provisionamento da máquina ocorrerá automaticamente. Aguarde! (aproveite para [estudar Vagrant](http://paulojeronimo.github.io/tutorial-vagrant) ou tomar um café enquanto isso ocorre! ;)
 
@@ -87,6 +94,8 @@ jboss_start
 ```
 
 Note que o WildFly está configurado para ser iniciado automaticamente no boot da `box`.
+
+Todo o conteúdo estático do projeto sislegis-app (diretório `src/main/webapp/static`) pode ser alterado, e ter essas mudanças automaticamente refletidas durante a execução da aplicação, sem a reinicialização ou o redeploy do sislegis-app no WildFly.
 
 [VirtualBox]:http://virtualbox.org
 [Vagrant]:https://www.vagrantup.com/

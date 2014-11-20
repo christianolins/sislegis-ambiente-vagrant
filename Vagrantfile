@@ -7,11 +7,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Lista de providers fedora: https://vagrantcloud.com/search?utf8=✓&sort=&provider=&q=fedora
 
   config.vm.box = "paulojeronimo/fedora20"
-
   config.vm.host_name = "sislegis"
 
+  # usa a variável de ambiente PORTA_SISLEGIS para determinar a porta do sislegis no HOST
+  # se ela não estiver definida, utiliza a porta 8080 (default no WildFly)
+  porta_sislegis = ENV['PORTA_SISLEGIS'] ? ENV['PORTA_SISLEGIS'] : 8080
+
   # Exporta as portas utilizadas pelo WildFly
-  config.vm.network :forwarded_port, guest: 8080, host: 8080
+  config.vm.network :forwarded_port, guest: 8080, host: porta_sislegis
   config.vm.network :forwarded_port, guest: 9990, host: 9990
 
   config.vm.provider "virtualbox" do |v|
