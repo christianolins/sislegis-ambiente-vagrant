@@ -1,16 +1,20 @@
 #!/bin/bash
 
+# Informações de sua conta no GitHub
 GITHUB_USER=paulojeronimo
 GITHUB_NAME='Paulo Jerônimo'
 GITHUB_EMAIL=paulojeronimo@gmail.com
 
-USA_FORKS=true
-
-$USA_FORKS && GITHUB_REPO_USER=$GITHUB_USER || GITHUB_REPO_USER=pensandoodireito
-
-GITHUB_SISLEGIS_DOTFILES=http://github.com/$GITHUB_REPO_USER/sislegis-dotfiles
-GITHUB_SISLEGIS_AMBIENTE=http://github.com/$GITHUB_REPO_USER/sislegis-ambiente
-GITHUB_SISLEGIS_SITE=http://github.com/$GITHUB_REPO_USER/sislegis-site
-GITHUB_SISLEGIS_APP=http://github.com/$GITHUB_REPO_USER/sislegis-app
+# Repositórios que serão baixados pelos scripts deste projeto.
+#
+# Todos os repositórios disponíveis na conta pensandoodireito são READONLY. Isso siginifica que, 
+#   para alterá-los, você deverá fazer um Pull Request para aprovação dos administradores.
+#   Para fazer esse Pull Request você deverá ter o feito o fork do repositório.
+#
+# Altere de "pensandoodireito" para "$GITHUB_USER" se tiver feito um fork do respositório.
+GITHUB_SISLEGIS_DOTFILES=http://github.com/pensandoodireito/sislegis-dotfiles
+GITHUB_SISLEGIS_AMBIENTE=http://github.com/pensandoodireito/sislegis-ambiente
+GITHUB_SISLEGIS_SITE=http://github.com/pensandoodireito/sislegis-site
+GITHUB_SISLEGIS_APP=http://github.com/pensandoodireito/sislegis-app
 
 # vim: set ts=2 sw=2 expandtab:

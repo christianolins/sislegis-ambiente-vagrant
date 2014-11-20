@@ -6,10 +6,7 @@ Scripts para montagem do ambiente de desenvolvimento do SISLEGIS numa `box` [Vag
 
 ## Fork de projetos
 
-Faça o fork dos seguintes projetos para a tua conta no GitHub:
-* [sislegis-dotfiles]
-* [sislegis-ambiente]
-* [sislegis-app]
+Se for realizar mudanças no código fonte do projeto sislegis-app (ou de qualquer outro do pensandoodireito) faça o fork de seu repositório.
 
 ## Pré-instalação
 
